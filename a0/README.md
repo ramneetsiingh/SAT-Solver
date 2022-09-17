@@ -67,7 +67,7 @@ However, you may find it useful to include meaningful messages
 in case you need to refer to previous, older commits.
 
 ```shell
-git commit
+git log
 ```
 
 Once you have a commit ready, it can be pushed onto the GitLab
@@ -95,7 +95,7 @@ git on the command line through the following commands.
 git config --global user.name "FIRSTNAME LASTNAME"
 git config --global user.email "USERNAME@uwaterloo.ca"
 git config --global push.default simple
-git config --global color.ui "true" 
+git config --global color.ui "true"
 ```
 
 If you wish to practice using git, you may try the ["Learn Git Branching"](https://learngitbranching.js.org/) on the [https://try.github.io/](https://try.github.io/) webpage.

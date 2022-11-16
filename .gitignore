@@ -1,4 +1,7 @@
 */pa1
 *.o
-.vscode
 test_your.out
+
+
+.vscode
+.DS_Store

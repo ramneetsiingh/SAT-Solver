@@ -28,11 +28,11 @@ typedef std::pair<Token, std::string> WORD;                 //
 class Lexer{
     std::string s;
     std::vector<WORD> tokenVector;
-    int curTokenIndex;
+    size_t curTokenIndex;
     void tokenize();
 public:
     Lexer(const std::string& s);
     WORD get_next_token();
-    void set_token_index(const int& i);
+    void set_token_index(const size_t& i);
     void reset_token_index();
 };

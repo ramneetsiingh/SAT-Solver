@@ -74,7 +74,7 @@ WORD Lexer::get_next_token(){
     return std::make_pair(Token::EOT, "");
 }
 
-void Lexer::set_token_index(const int& i){
+void Lexer::set_token_index(const size_t& i){
     curTokenIndex = i;
 }
 

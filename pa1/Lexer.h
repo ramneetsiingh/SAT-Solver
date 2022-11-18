@@ -23,7 +23,7 @@ typedef enum{
 Pair of token and its value
 Example <Token::OR, "+">
 */
-typedef std::pair<Token, std::string> WORD;                 // 
+typedef std::pair<Token, std::string> WORD;
 
 class Lexer{
     std::string s;

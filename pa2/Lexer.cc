@@ -7,7 +7,7 @@ void Lexer::tokenize(){
     std::string wordStr;
     std::string binExp = s + '\n';
     for(char c: binExp){
-        if(Helper::isAlphaNum(c) and (wordStr.size() != 0 or (c != '0' and c != '1'))){
+        if(Helper::isAlphaNum(c)){
             if(wordStr.size() == 0 and Helper::isNum(c)){
                 throw INVALID_INPUT;
             }

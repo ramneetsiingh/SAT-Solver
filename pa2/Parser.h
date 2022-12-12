@@ -3,6 +3,7 @@
 #include "Lexer.h"
 #include <iostream>
 
+// Grammer, First's, and Follow's
 /*
 Grammer converted to LL(1) parsable form.
 
@@ -44,14 +45,9 @@ class Parser{
     Lexer lex;
     WORD currWord;
 
-    /*
-    Suffix _NT means non-terminal.
-    */
-    void Formula_NT();
-    void ConjTerm_NT();
-    void ConjTermPrime_NT();
-    void Term_NT();
-    void TermPrime_NT();
+    void parseFormula();
+    void parseConjTerm();
+    void parseTerm();
 public:
     Parser(const std::string& s);
 };

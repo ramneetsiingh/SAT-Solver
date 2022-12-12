@@ -54,4 +54,7 @@ class Parser{
     PASTree parseTerm();
 public:
     Parser(const std::string& s);
+    PASTree getASTRoot(){
+        return ASTRoot;
+    }
 };

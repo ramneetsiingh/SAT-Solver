@@ -6,20 +6,31 @@ class ASTree {
     std::string content;
     ASTree *left;
     ASTree *right;
+    bool ID;
   public:
+    ASTree(std::string content, ASTree * left, ASTree * right, bool isID):
+                        content(content),
+                        left(left),
+                        right(right),
+                        ID(isID){};
+
     ASTree(std::string content, ASTree * left, ASTree * right):
                         content(content),
                         left(left),
-                        right(right){};
+                        right(right),
+                        ID(false){};
 
     std::string getContent(){
         return content;
     }
-    ASTree* getleft(){
+    ASTree* getLeft(){
         return left;
     }
     ASTree* getRight(){
         return right;
+    }
+    bool isID(){
+        return ID;
     }
 };
 

@@ -5,7 +5,7 @@ PASTree Parser::parseTerm(){
     PASTree ret = NULL;
     if(currWord.first == Token::Identifier){
         if(IDNode.find(currWord.second) == IDNode.end()){
-            ret = new ASTree(currWord.second, NULL, NULL);
+            ret = new ASTree(currWord.second, NULL, NULL, true);
             IDNode[currWord.second] = ret;
         } else{
             ret = IDNode[currWord.second];

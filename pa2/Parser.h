@@ -1,7 +1,9 @@
 #pragma once
 
 #include "Lexer.h"
+#include "ASTree.h"
 #include <iostream>
+#include <map>
 
 // Grammer, First's, and Follow's
 /*
@@ -44,10 +46,12 @@ Term                |   ) + * EOF
 class Parser{
     Lexer lex;
     WORD currWord;
+    PASTree ASTRoot;
+    std::map<std::string, PASTree> IDNode;   //Identifier AST node
 
-    void parseFormula();
-    void parseConjTerm();
-    void parseTerm();
+    PASTree parseFormula();
+    PASTree parseConjTerm();
+    PASTree parseTerm();
 public:
     Parser(const std::string& s);
 };

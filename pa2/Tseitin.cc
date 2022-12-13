@@ -1,9 +1,10 @@
 #include "Tseitin.h"
 
 void Tseitin::transform(PASTree node){
+    int a = getNumForNode(node);
+
     if(node == NULL or node->isID()) return;
 
-    int a = getNumForNode(node);
     PASTree left = node->getLeft();
     PASTree right = node->getRight();
     int b = getNumForNode(left);
@@ -33,6 +34,7 @@ void Tseitin::transform(PASTree node){
 
 int Tseitin::getNumForNode(PASTree node){
     int retVal;
+    if(node == NULL) return 0;
     if(numTable.find(node) != numTable.end()){
         retVal = numTable[node];
     } else{
@@ -45,4 +47,5 @@ int Tseitin::getNumForNode(PASTree node){
 Tseitin::Tseitin(PASTree root){
     transform(root);
     CNF.push_back({1});
+    numLiterals = numCounter - 1;
 }

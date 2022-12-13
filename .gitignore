@@ -1,5 +1,7 @@
 */pa1
 */pa2
+*/build/*
+*/minisat/*
 *.o
 test_your.out
 

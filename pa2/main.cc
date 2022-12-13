@@ -4,7 +4,11 @@
 
 void evaluate(const std::string& s){
     try{
-        SATSolver::solve(s);
+        if(SATSolver::solve(s)){
+            std::cout<<"sat"<<std::endl;
+        } else{
+            std::cout<<"unsat"<<std::endl;
+        }
     } catch(const char* s){
         std::cout<<"Error: "<<s<<std::endl;
     } catch(const int i){

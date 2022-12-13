@@ -4,6 +4,7 @@
 
 #include "minisat/core/SolverTypes.h"
 #include "minisat/core/Solver.h"
+#include<memory>
 
 
 // void printTseitin(std::vector<std::vector<int>> cnf){
